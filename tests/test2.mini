@@ -1,0 +1,8 @@
+SEQ
+
+log("Executing factorial of 6 and first 10 terms of the fibonacci sequence parallely",  "\n")
+
+PAR
+
+factorial(6)
+fibonacci(10)

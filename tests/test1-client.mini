@@ -1,0 +1,14 @@
+SEQ
+log("PROGRAM 1:\nCALCULTOR\n")
+
+operator = "+"
+num1 = 5
+num2 =  10
+
+result = 0
+c_channel calculator("localhost","localhost")
+
+calculator.send(operator, num1, num2, result)
+calculator.receive(result)
+
+log("Recieved result: ", result, "\n")

@@ -1,0 +1,32 @@
+SEQ
+
+result = 0
+c_channel calculator("localhost","localhost")
+
+operation = 'null'
+
+num1 = 0
+num2 = 0
+
+log("Lostening for connections...\n")
+
+calculator.receive(operation, num1, num2, result)
+
+log("Conncection successfull \nRecieved data for operation: ", num1, operation, num2, "\n\n")
+
+if (operation == '-'){
+    result = num1 - num2
+}
+if (operation == '+'){
+    result = num1 + num2
+}
+if (operation == '*'){
+    result = num1 * num2
+}
+if (operation == '/') {
+    result = num1 / num2
+}
+
+log("Sending the result: ", result, "\n\n")
+
+calculator.send(result)
